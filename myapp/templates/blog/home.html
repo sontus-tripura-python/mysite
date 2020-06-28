@@ -1,0 +1,48 @@
+{% extends 'blog/base.html' %}
+{% block  body %}
+
+<div class="">
+  <div class="container">
+  <div class="card home_post_section">
+    <div class="card-body">
+      <h2 class="python_heading">Python Basic </h2>
+     <div class="left_side_bar">
+    <table class="table   table-dark">
+
+      <tbody>
+{% for cats in python_cats %}
+        <tr>
+          <td><a href="{{ cats.get_absolute_url }}">{{ cats.name }}</a></td>
+  {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+
+     </div>
+<div class="right_side_bar">
+
+  <div class="card border-success mb-3">
+  <div class="card-header bg-transparent border-success text-center">All Category Post </div>
+  <div class="card-body">
+      {% for post in python %}
+      <strong>{{ post.created_date }}</strong>
+    <h3 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+    <p class="card-text">{{ post.text |truncatechars:300 | safe }}</p>
+    <strong><a href="{{ post.link }}"> Created By : {{ post.created_by }}</a></strong>
+    <hr>
+      {%endfor %}
+  </div>
+
+</div>
+
+
+
+</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+{% endblock %}

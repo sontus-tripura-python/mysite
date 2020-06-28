@@ -1,0 +1,119 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/mysite.css' %}">
+    <title> Sontus Trp</title>
+  </head>
+  <body class="bodysectioon" >
+
+{% include 'blog/navbar.html' %}
+
+
+{% block body %}
+
+
+{% endblock %}
+
+
+<section class="footersection">
+<h4 class="copyright">&copy 2019 all Developed by Sontustrp.com</h4>
+<div class="text-center">
+  <h2 class="followtitile">follow us </h2>
+<a href="#"><i class="fab fa-facebook-f aboutfb"></i></a>
+<a href="#"><i class="fab fa-twitter abouttwitter"></i></a>
+<a href="#"><i class="fab fa-linkedin-in aboutlinkIN"></i></a>
+<a href="" ><i class="fab fa-instagram aboutinstgrm"></i></a>
+</div>
+</section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+<script src="{% static 'js/isotope.min.js' %}"></script>
+<script type="text/javascript">
+//Fundamentals button
+  $(document).ready(function(){
+    $("#pythonfunda").click(function(){
+      $("#show").toggle(2000);
+    });
+  });
+
+
+
+var typed = new Typed(".typing", {
+  strings: ["HTML", "CSS", "JAVASCRIPT","REACT","PHP","PYTHON","SEO"],
+  typeSpeed:50,
+  backSpeed:50,
+  backDelay:700,
+  loop:true
+});
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".text-markdown").each(function(){
+      var content = $(this).text()
+      console.log(content)
+      var markedContent = marked(content)
+      console.log(markedContent)
+      $(this).html(markedContent)
+    })
+  })
+</script>
+<script type="text/javascript">
+(function(){
+
+    'use strict';
+
+
+    var $projects = $('.projects');
+
+    $projects.isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+    });
+
+    $('ul.filters > li').on('click', function(e){
+
+        e.preventDefault();
+
+        var filter = $(this).attr('data-filter');
+
+        $('ul.filters > li').removeClass('active');
+        $(this).addClass('active');
+
+        $projects.isotope({filter: filter});
+
+    });
+
+    $('.card').mouseenter(function(){
+
+        $(this).find('.card-overlay').css({'top': '-100%'});
+        $(this).find('.card-hover').css({'top':'0'});
+
+    }).mouseleave(function(){
+
+        $(this).find('.card-overlay').css({'top': '0'});
+        $(this).find('.card-hover').css({'top':'100%'});
+
+    });
+
+})(jQuery);
+</script>
+  </body>
+</html>

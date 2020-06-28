@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a:hover{
+  text-decoration: none;
+}
+
+.homelistpage{
+  margin-top: 30px;
+}
+.bgnavbar{
+  background: #e0e0ff;
+}
+.navbar{
+  box-shadow: 2px 2px 3px #000;
+}
+.nav-link{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.bodysectioon{
+    background: #dcddea82;
+
+}
+.home_post_section{
+  min-height: 400px;
+}
+/*--- about section css  */
+.profile_div{
+	width:770px;
+	min-height:950px;
+	background:#fff;
+	box-shadow:1px 4px 5px 2px #333d42
+}
+.profile-detail-pic{
+	height:300px;
+	margin-top:20px;
+	width:300px;
+}
+.about_Image{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+.name{
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-style: italic;
+}
+.aboutme{
+  margin-top: 20px;
+  padding: 20px 30px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+.followMe{
+  font-style: italic;
+}
+.aboutfb{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 10px;
+  background: #3B5998;
+  color: white;
+}
+.abouttwitter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 10px;
+  background: #55ACEE;
+  color: white;
+}
+.aboutlinkIN {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 10px;
+  background: #007bb5;
+  color: white;
+}
+.aboutinstgrm{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 22px;
+  padding: 10px;
+  background:#E4405F;
+  color: white;
+}
+
+.footersection{
+  background: #111d1e;
+  text-align:center;
+  color: #fff;
+  min-height: 200px;
+
+}
+.followtitile{
+  font-style: italic;
+  font-weight: lighter;
+}
+.copyright{
+  margin-top: 10px;
+  font-style: italic;
+}
+/*---- blog post section----*/
+.python_heading{
+  text-align: center;
+  font-style: italic;
+}
+.left_side_bar{
+  width: 250px;
+  height: 500px;
+  float: left;
+  margin-right: 8px;
+  border-right: 2px solid #ddd;
+
+}
+.right_side_bar{
+  margin-left: 10px;
+}
+/*--- porfolio css---*/
+.card-img{
+  height: 200px;
+  width: 200px;
+}
+.cardbox{
+    position: relative;
+    margin-bottom: 50px;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.075);
+}
+
+.card-head{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(67,78,94,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#fff;
+    padding: 4px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.card-hover{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40,190,168,0.9);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.cardbody{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4.title{
+    color: #434e5e;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.card-btn{
+    margin-bottom: -40px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-btn:hover{
+    background-color: #28bea8;
+    color: #fff;
+}

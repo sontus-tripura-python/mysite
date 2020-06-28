@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+{% block  body %}
+<div class="container">
+
+       <div class="row">
+
+           <div class="col-lg-12">
+
+        <div class="text-center p-4">
+          <a href="{% url 'myapp:portfolio_list' %}" class="btn btn-primary">All </a>
+          {% for cats in portfolio_cats %}
+          <span {% if not category %} class="seleted" {% endif %}>
+         <a href="{{ cats.get_absolute_url }}" class="btn btn-outline-primary">
+           {{ cats.name }}
+         </a>
+          </span>
+          {% endfor %}
+
+
+        </div>
+
+<div class="projects">
+
+   <div class="row">
+  {% for port in portfolio %}
+<div class="col-lg-4 item html">
+
+ <div class="card cardbox">
+
+     <div class="card-head">
+         <img src="{{ port.image.url }}" alt="" class="img-fluid card-img">
+         <div class="card-overlay"><h4 class="overlay_heading">{{ port.name }}</h4></div>
+         <div class="card-hover">
+             <p>{{ port.description }}
+               </p>
+         </div>
+     </div>
+
+     <div class="card-body cardbody text-center">
+         <h4 class="title">{{ port.name }}</h4>
+         <a href="{{ port.link }}" class="btn btn-lg card-btn">See More</a>
+     </div>
+
+ </div>
+
+</div>
+  {% endfor %}
+   </div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

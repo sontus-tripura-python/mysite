@@ -1,0 +1,41 @@
+{% extends 'blog/base.html' %}
+
+{% block body %}
+  <section class="profile_details_section">
+
+    <div class="container">
+    <div class="row justify-content-center">
+      {% for about in abouts %}
+    <div class="profile_div">
+      <div class="text-center aboutimg">
+      <img src="{{ about.image.url }}" class="img-responsive about_Image">
+      <h2 class="name">{{ about.name }}</h2>
+      <h4>{{ about.title }}</h4>
+      <h4>I have good knowledge on </h4>
+      <h4 class="typing"style="color:green; font-weight:bold;"></h4>
+    </div>
+    <div class="tex-center aboutme">
+      <p>{{ about.text|safe }}</p>
+    </div>
+
+    {% endfor %}
+
+ <div class="text-center">
+
+ <h3 class="followMe">Follow me on social network </h3>
+ <a href="#"><i class="fab fa-facebook-f aboutfb"></i></a>
+ <a href="#"><i class="fab fa-twitter abouttwitter"></i></a>
+ <a href="#"><i class="fab fa-linkedin-in aboutlinkIN"></i></a>
+ <a href="" ><i class="fab fa-instagram aboutinstgrm"></i></a>
+ </div>
+</div>
+
+  </div>
+
+    </div>
+
+
+  </section>
+
+
+{% endblock %}
